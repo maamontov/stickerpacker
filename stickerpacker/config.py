@@ -8,5 +8,5 @@ class Config:
         self.emoji = getenv("EMOJI", "⭐️")
         self.sticker_set_title = (
             f"{self.emoji} "
-            f"{getenv('STICKER_SET_TITLE', 'Избранные стикеры')}",
+            f"{getenv('STICKER_SET_TITLE', 'Избранные стикеры')}"
         )
