@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "stickerpacker"
-version = "0.1.0"
+version = "0.1.1"
 description = "Telegram bot for storing your favorite stickers in one set"
 authors = ["Nikolay Mamontov <maamontov@ya.ru>"]
 readme = "README.md"
