@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "stickerpacker"
+version = "0.1.0"
+description = "Telegram bot for storing your favorite stickers in one set"
+authors = ["Nikolay Mamontov <maamontov@ya.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiogram = "^3.4.1"
+
+[tool.poetry.group.development.dependencies]
+black = "^24.3.0"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 80
+
+[tool.isort]
+profile = "black"
