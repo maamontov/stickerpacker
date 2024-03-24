@@ -1,0 +1,6 @@
+services:
+  stickerpacker:
+    container_name: stickerpacker
+    build: .
+    restart: always
+    env_file: .env

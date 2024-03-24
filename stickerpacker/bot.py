@@ -14,9 +14,8 @@ from aiogram.types import (
     Sticker,
     StickerSet,
 )
-
-from chilldev.utils import get_banner, get_logging_config
-from stickerpacker.config import Config
+from config import Config
+from utils import get_banner, get_logging_config
 
 dispatcher = Dispatcher()
 config = Config()
