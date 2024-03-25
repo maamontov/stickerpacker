@@ -74,7 +74,10 @@ async def command_remove_handler(message: Message, state: FSMContext) -> None:
 
 # --- /remove_set ---
 @dispatcher.message(Command("remove_set"))
-async def command_remove_handler(message: Message, state: FSMContext) -> None:
+async def command_remove_set_handler(
+    message: Message,
+    state: FSMContext,
+) -> None:
     await state.set_state(States.remove_all)
     await message.answer(
         "🧐 Вы точно хотите удалить набор?\n" 'Для подтверждения отправьте "+"',
@@ -83,7 +86,10 @@ async def command_remove_handler(message: Message, state: FSMContext) -> None:
 
 # --- receive /remove_set confirmation ---
 @dispatcher.message(States.remove_all)
-async def command_remove_handler(message: Message, state: FSMContext) -> None:
+async def receive_remove_set_confirmation_handler(
+    message: Message,
+    state: FSMContext,
+) -> None:
     await state.set_state()
 
     if message.text != "+":

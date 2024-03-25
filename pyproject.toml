@@ -12,6 +12,8 @@ aiogram = "^3.4.1"
 [tool.poetry.group.development.dependencies]
 black = "^24.3.0"
 isort = "^5.13.2"
+flake8 = "^7.0.0"
+flake8-pyproject = "^1.2.3"
 
 [build-system]
 requires = ["poetry-core"]
@@ -22,3 +24,11 @@ line-length = 80
 
 [tool.isort]
 profile = "black"
+
+[tool.flake8]
+ignore = ['E231', 'E241']
+per-file-ignores = [
+    '__init__.py:F401',
+]
+max-line-length = 88
+count = true
