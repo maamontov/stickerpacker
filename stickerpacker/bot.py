@@ -198,7 +198,7 @@ async def get_sticker_set(sticker_set_name: str) -> Optional[StickerSet]:
 async def get_sticker_to_add(sticker: Sticker) -> InputSticker:
     return InputSticker(
         sticker=sticker.file_id,
-        emoji_list=[config.emoji],
+        emoji_list=[sticker.emoji],
     )
 
 
