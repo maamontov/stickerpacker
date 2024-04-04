@@ -54,7 +54,7 @@ docker compose up --build
 # Использование
 Повышение качества кода
 ```
-poetry run black .
-poetry run isort .
-poetry run flake8 .
+poetry run ruff check
+OR
+poetry run ruff check --fix
 ```
