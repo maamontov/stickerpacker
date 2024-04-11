@@ -1,0 +1,29 @@
+name: Deploy
+run-name: 🚀 Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Pulling:
+    name: 📥 Pulling updates
+    runs-on: self-hosted
+    steps:
+      - name: 🗂️ Check out repository code
+        uses: actions/checkout@v4
+      - name: ⚙️ Run test container
+        run: docker compose -p actions-stickerpacker up --build -d
+
+  Linting:
+    name: 🔮 Linting
+    runs-on: self-hosted
+    steps:
+      - name: 📋 Ruff check
+        run: docker compose exec poetry run ruff check
+
+  Run:
+    name: 🏁 Run
+    runs-on: self-hosted
+    steps:
+      - name: 📦 Run container
+        run: docker compose up --build -d
